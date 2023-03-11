@@ -1,0 +1,128 @@
+@import 'boilerplate';
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+body{
+    overflow: hidden;
+    font-family: $font-family;
+    background-color: $dark-gray-blue;
+}
+
+
+
+h5, p {
+    color: $light-levander;
+}
+
+.container {
+    background-color: $white;
+    border-radius: 10px;
+    height: 80vh;
+    width: 1000px;
+    margin: 10vh auto;
+    @include flex-center;
+    .inside {
+        display: flex;
+        .left-side{
+            h1,h2,h3,h4 {
+                color: $white;
+            }
+            border-radius: 15px;
+            background: $background-gradient;
+            width: 270px;
+            @include flex-center;
+            @include flex-column;
+            .result {
+                color: $light-levander;
+                font-size: 1.125rem;
+            }
+            .circle{
+                background: $circle-gradient;
+                border-radius: 100%;
+                width: 200px;
+                height: 200px;
+                @include space-around;
+                @include flex-column;
+                .big-number{
+                    font-size: 3.5rem;
+                    transform: translateY(30px);
+                }
+                .of100{
+                    transform: translateY(-40px);
+                    font-size: 1.03rem;
+                }
+            }
+        }
+        .right-side{
+            box-shadow: 1px 10px 15px 0px darken($dark-gray-blue, $amount: 10%) ;
+            width: 300px;
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            @include flex-center;
+            @include flex-column;
+            .summary {
+                transform: translateX(-85px);
+                font-size: 1.2rem;
+            }
+            .first-of-four{
+
+                .icon, i{
+                    color: $light-red;
+                    margin-right: 10px;
+                }
+                display: flex;
+                justify-content: space-around;
+                width: 85%;
+                background-color: lighten($light-red,30%);
+                @include border-radius-10px;
+                margin-bottom: 5px;
+            }
+            .second-of-four{
+                .icon, i{
+                    color: $orangey-yellow;
+                    margin-right: 10px
+                }
+                display: flex;
+                margin-bottom: 5px;
+                justify-content: space-around;
+                width: 85%;
+                background-color: lighten($orangey-yellow,40%);
+                @include border-radius-10px;
+            }
+            .third-of-four{
+                .icon, i{
+                    color: $green-teal;
+                    margin-right: 10px
+                }
+                display: flex;
+                margin-bottom: 5px;
+                justify-content: space-around;
+                width: 85%;
+                background-color: lighten($green-teal,58%);
+                @include border-radius-10px;
+            }
+            .fourth-of-four{
+                .icon, i{
+                    color: $very-dark-blue;
+                    margin-right: 10px
+                }
+                display: flex;
+                margin-bottom: 5px;
+                justify-content: space-around;
+                width: 85%;
+                background-color: lighten($very-dark-blue,50%);
+                @include border-radius-10px;
+            }
+            .continue {
+                padding: 17px 95px;
+                margin: 10px;
+                @include border-radius-30px;
+                font-weight: $fw-bold;
+                font-size: 1.1rem;
+                background-color: darken($very-dark-blue, $amount: 25%);
+                color: $white;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}

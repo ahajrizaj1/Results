@@ -1,0 +1,86 @@
+// Primary Colors
+
+$borangey-yellow: hsl(39, 100%, 56%);
+$light-red: hsl(0, 100%, 67%);
+$green-teal: hsl(166, 100%, 37%);
+$cobalt-blue: hsl(166, 100%, 37%);
+
+// Gradients
+
+$background-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+$circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+
+// Neutral
+
+$white: hsl(0, 0%, 100%);
+$pale-blue: hsl(221, 100%, 96%);
+$light-levander: hsl(241, 100%, 89%);
+$dark-gray-blue: hsla(241, 100%, 89%, 50% );
+$very-dark-blue: hsla(241, 72%, 46%);
+
+
+// Font Size
+
+$paragraph: 18px;
+$fw-bold: 700;
+$fw-xbold: 800;
+
+// Font Style
+
+$font-family: 'Hanken Grotesk', sans-serif;
+
+
+// Define mobile and desktop breakpoints
+$breakpoint-mobile: 375px;
+$breakpoint-desktop: 1440px;
+
+// Define media query mixins for each breakpoint
+@mixin media-query-mobile {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin media-query-desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// Mixin
+
+@mixin reset{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin space-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-column {
+    flex-direction: column;
+}
+
+@mixin border-radius-10px{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+@mixin border-radius-30px{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
